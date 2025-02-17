@@ -47,17 +47,21 @@ class MainActivity : AppCompatActivity() {
     {
         if (view.id == R.id.radioButton){
             currentSelection = findViewById<RadioButton>(R.id.radioButton).text.toString()
+            findViewById<RadioGroup>(R.id.radioGroup).clearCheck()
         }
 
         if (view.id == R.id.radioButton2){
             currentSelection = findViewById<RadioButton>(R.id.radioButton2).text.toString()
+            findViewById<RadioGroup>(R.id.radioGroup).clearCheck()
         }
 
         if (view.id == R.id.radioButton3){
             currentSelection = findViewById<RadioButton>(R.id.radioButton3).text.toString()
+            findViewById<RadioGroup>(R.id.radioGroup2).clearCheck()
         }
         if (view.id == R.id.radioButton4){
         currentSelection = findViewById<RadioButton>(R.id.radioButton4).text.toString()
+            findViewById<RadioGroup>(R.id.radioGroup2).clearCheck()
         }
 
         //findViewById<TextView>(R.id.score_text).text = currentSelection //how to set upper text
@@ -84,6 +88,7 @@ class MainActivity : AppCompatActivity() {
             checkMode = true
             findViewById<ImageView>(R.id.imageView).drawable.colorFilter = null
             findViewById<RadioGroup>(R.id.radioGroup).clearCheck()
+            findViewById<RadioGroup>(R.id.radioGroup2).clearCheck()
             findViewById<RadioButton>(R.id.radioButton).setEnabled(false)
             findViewById<RadioButton>(R.id.radioButton2).setEnabled(false)
             findViewById<RadioButton>(R.id.radioButton3).setEnabled(false)
